@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="js/pickadate.js-3.6.2/lib/themes/default.css">
+    <link rel="stylesheet" href="js/pickadate.js-3.6.2/lib/themes/default.date.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <title>Contato</title>
     <script type="text/javascript" src="js/validacao.js"></script>
 </head>
@@ -11,11 +14,11 @@
     <h1>Contato</h1>
     <form name="frmContato" method="post" action="sucesso.html">
         <label for="Nome">Nome</label><br>
-        <input type="text" name="Nome" id="Nome">
+        <input type="text" name="Nome" id="Nome"> 
         <br>
 
         <label for="Telefone">Telefone</label><br>
-        <input type="text" name="Telefone" id="Telefone">
+        <input type="text" class="phone_mobile_with_ddd')" name="Telefone" id="Telefone">
         <br>
 
         <label for="Email">E-mail</label><br>
@@ -23,8 +26,17 @@
         <br>
 
         <label for="Cpf">CPF</label><br>
-        <input type="text" name="Cpf" id="Cpf">
+        <input type="text" class="cpf" name="Cpf" id="Cpf">
         <br>
+
+        <label for="Placa">Placa</label><br>
+        <input type="text" class="license_plate" name="Placa" id="placa">
+        <br>
+
+        <label for="Data">Data de Nascimento</label><br>
+        <input type="text" class="datepicker" name="Data" id="data">
+        <br>
+
 
         <label for="Bairro">Bairro</label><br>
         <select name="Bairro" id="Bairro">
@@ -64,5 +76,26 @@
         <input type="button" name="BtnEnviar" id="BtnEnviar" value="Enviar" onclick="ValidarFormunlario();">
     </form>
     
+    <div id="erro" class="modal">
+        <p>aqui irão aparecer os erros</p>
+        
+    </div>
+    <!-- Modal HTML embedded directly into document -->
+    <div id="ex1" class="modal">
+    <p>Thanks for clicking. That felt good.</p>
+    <a href="#" rel="modal:close">Close</a>
+    </div>
+  
+    <!-- Link to open the modal -->
+    <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.js"></script>
+    <script type="text/javascript" src="js/pickadate.js-3.6.2/lib/picker.js"></script>
+    <script type="text/javascript" src="js/pickadate.js-3.6.2/lib/picker.date.js"></script>
+    <script type="text/javascript" src="js/pickadate.js-3.6.2/lib/translations//pt_BR.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script type="text/javascript" src="js/validacao.js"></script>
+   
 </body>
 </html>
